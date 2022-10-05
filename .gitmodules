@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = git@github.com:Eric-Mendes/smart-plant.git
+[submodule "mobile_app"]
+	path = mobile_app
+	url = git@github.com:rabbitvictor/smartfactoryapp.git
