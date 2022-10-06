@@ -4,3 +4,6 @@
 [submodule "mobile_app"]
 	path = mobile_app
 	url = git@github.com:rabbitvictor/smartfactoryapp.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:MateusOlivi/smartfactoryfront.git
