@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+  # etl:
+
+  #   depends_on:
+  #     - db  
+  backend:
+    build: ./backend
+    ports:
+      - '8000:80'
+    volumes:
+      - ./backend/src/:/code/src:ro
+    depends_on:
+      - db
+  frontend:
+    image: anvilworks/anvil-app-server
+    ports:
+      - 3030:3030
+    volumes:
+      - ./frontend:/apps/MainApp
+    depends_on:
+      - backend
