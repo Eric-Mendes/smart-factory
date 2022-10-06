@@ -19,3 +19,8 @@ Suba todos os containeres de cada microsserviço apenas com o comando
 docker compose up -d
 ```
 Após isto você encontrará o backend no endereço `localhost:8000` e o web app (frontend) no endereço `localhost:3030`.
+
+Não se esqueça de derrubar todos os containeres ao final, rodando o comando abaixo
+```bash
+docker compose down
+```
